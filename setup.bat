@@ -20,15 +20,10 @@ if not errorlevel 1 (
 
     echo Installing uv...
     powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://astral.sh/uv/install.ps1 | iex"
-    if errorlevel 1 (
-        echo uv installation failed.
-        exit /b 1
-    )
-
     set "UV=%USERPROFILE%\.local\bin\uv.exe"
-    if not exist "%UV%" (
-        echo uv was installed, but its executable could not be found.
-        echo Restart this terminal and run setup.bat again.
+    if not exist "%USERPROFILE%\.local\bin\uv.exe" (
+        echo uv installation failed, or its executable could not be found.
+        pause
         exit /b 1
     )
 )
@@ -37,6 +32,7 @@ echo Creating the virtual environment and installing dependencies...
 "%UV%" sync
 if errorlevel 1 (
     echo Setup failed.
+    pause
     exit /b 1
 )
 
