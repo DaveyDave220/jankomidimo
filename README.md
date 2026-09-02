@@ -21,35 +21,11 @@ code may also run on Linux, but will probably require some manual tinkering. iOS
 
 4. Double-click `run.bat` to start the application.
 
-### pip alternative
-
-`pip` reads `pyproject.toml` when installing the project itself, so you can
-install everything with:
-
-```powershell
-python -m pip install .
-```
-
-If you only want to install the runtime dependencies, use the included
-`requirements.txt` instead:
-
-```powershell
-python -m pip install -r requirements.txt
-```
-
 ## Run from the repository
 
 ```powershell
 python .\src\janko_keyboard.py
 ```
-
-Other MIDI software can also work if it provides an available MIDI output, but
-the program automatically selects `VirtualMIDISynth` first. Use the MIDI output
-selector in the GUI to switch to another available output at runtime.
-Select `No MIDI output` to stop using any MIDI device while leaving the app open.
-Use the keyboard layout selector beside it to switch between the German and
-English key arrangements. Switching layouts releases currently held notes
-before rebuilding the on-screen keyboard.
 
 ## How it works
 
@@ -72,6 +48,14 @@ The project separates keyboard input, MIDI messages, and audio generation:
 5. The selected synthesizer turns those MIDI instructions into audio. CoolSoft
 	VirtualMIDISynth does this using the configured SoundFont; the Python program
 	does not contain instrument recordings itself.
+
+Other MIDI software can also work if it provides an available MIDI output, but
+the program automatically selects `VirtualMIDISynth` first. Use the MIDI output
+selector in the GUI to switch to another available output at runtime.
+Select `No MIDI output` to stop using any MIDI device while leaving the app open.
+Use the keyboard layout selector beside it to switch between the German and
+English key arrangements. Switching layouts releases currently held notes
+before rebuilding the on-screen keyboard.
 
 The visual window is updated separately from the audio path, so the highlighted
 keyboard shows the notes currently being sent.
