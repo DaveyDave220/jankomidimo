@@ -1,0 +1,14 @@
+[project]
+name = "janko-keyboard"
+version = "0.1.0"
+description = "PC-Tastatur als Janko-Keyboard mit MIDI-Output"
+requires-python = ">=3.10"
+
+dependencies = [
+    "mido",
+    "python-rtmidi",
+    "pynput",
+]
+
+[tool.uv]
+# optional, falls du spezielle Settings brauchst
