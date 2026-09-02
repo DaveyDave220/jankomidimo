@@ -12,7 +12,7 @@ code may also run on Linux, but will probably require some manual tinkering. iOS
 
 ## Installation
 
-1. Clone this repository with `git clone https://github.com/DirtyDaveDong/jankomidimo.git`, or [download and unpack the ZIP from upstream](https://github.com/DirtyDaveDong/jankomidimo/archive/refs/heads/main.zip), if you never heard of `git`.
+1. Clone this repository with `git clone https://github.com/DaveyDave220/jankomidimo.git`, or [download and unpack the ZIP from upstream](https://github.com/DaveyDave220/jankomidimo/archive/refs/heads/main.zip), if you never heard of `git`.
 2. Double-click `setup.bat` and wait for setup to finish.
 
 3. Optional, but recommended: install [CoolSoft VirtualMIDISynth](https://coolsoft.altervista.org/en/virtualmidisynth#download) for better sound.
